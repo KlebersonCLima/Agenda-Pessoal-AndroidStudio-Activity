@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compromissos"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:gravity="center"
+        android:layout_marginBottom="16dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="16dp">
+
+        <Button
+            android:id="@+id/btn_hoje"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Hoje"
+            android:layout_marginEnd="8dp" />
+
+        <Button
+            android:id="@+id/btn_outra_data"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Outra Data"
+            android:layout_marginStart="8dp" />
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_data_visualizacao"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Compromissos de hoje"
+        android:textAlignment="center"
+        android:layout_marginBottom="8dp"
+        android:textStyle="bold" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1">
+
+        <TextView
+            android:id="@+id/tv_compromissos"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Nenhum compromisso cadastrado para esta data."
+            android:textSize="14sp"
+            android:padding="8dp"
+            android:background="#F5F5F5" />
+
+    </ScrollView>
+
+</LinearLayout>

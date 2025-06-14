@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp">
+
+   <!--Parte 1 tela -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_entrada"
+        android:name="com.example.agendapessoal.FragmentEntrada"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <!-- Linha divisória -->
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="#E0E0E0"
+        android:layout_margin="8dp" />
+
+    <!-- visualização dos compromissos -->
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragment_visualizacao"
+        android:name="com.example.agendapessoal.FragmentVisualizacao"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
