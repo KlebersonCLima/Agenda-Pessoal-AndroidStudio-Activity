@@ -1,70 +1,34 @@
-# Agenda Pessoal – App Android
+# Agenda Pessoal
 
-**Desenvolvido por:** Kleberson Crystyan de Lima  
-**Stack:** Android + Java + SQLite  
-**Arquitetura:** MVC (Model-View-Controller)
-
----
-
-## Visão Geral
-
-Aplicativo Android nativo para gerenciamento de compromissos pessoais. Projetado com foco em modularidade, clareza de código e experiência do usuário, seguindo rigorosamente o padrão de arquitetura MVC e boas práticas de desenvolvimento mobile.
-
----
+Aplicativo Android nativo para gerenciamento de compromissos pessoais, com arquitetura MVC e persistência local em SQLite.
 
 ## Funcionalidades
 
-- Cadastro de compromissos com data, hora e descrição.
-- Listagem de compromissos com filtros automáticos por data.
-- Interface modular baseada em `Fragments`.
-- Persistência local com SQLite.
-- CRUD completo (Create, Read, Update, Delete).
-- Uso de DatePicker e TimePicker nativos do Android.
+- CRUD completo de compromissos (data, hora e descrição)
+- Listagem com filtro por data
+- Interface modular com `Fragments`
+- `DatePicker` e `TimePicker` nativos
 
----
+## Tecnologias
 
-## Estrutura do Projeto
+- Java
+- Android SDK (compatível com Android 5.0+)
+- SQLite
 
-**Model:**
-- `Compromisso.java`: Classe de entidade com atributos, getters/setters e encapsulamento.
-- `CompromissosDB.java`: Operações de acesso ao banco.
-- `CompromissosDBHelper.java`: Criação e versionamento do banco.
+## Arquitetura (MVC)
 
-**View:**
-- `MainActivity.java`
-- `FragmentoCadastro.java`
-- `FragmentoVisualizacao.java`
+| Camada | Componentes |
+|---|---|
+| Model | `Compromisso`, `CompromissosDB`, `CompromissosDBHelper` |
+| View | `MainActivity`, `FragmentoCadastro`, `FragmentoVisualizacao` |
+| Controller | Fluxo entre fragments, validação de entrada e acesso aos dados |
 
-**Controller:**
-- Lógica integrada às views.
-- Controle de fluxo entre os fragments.
-- Validação de entrada e comunicação com a camada de dados.
+## Executar
 
----
+1. Abra o projeto no Android Studio.
+2. Aguarde a sincronização do Gradle.
+3. Execute em um emulador ou dispositivo (Android 5.0+).
 
-## Stack Tecnológica
+## Autor
 
-| Tecnologia     | Função                |
-|----------------|-----------------------|
-| Java           | Lógica e estrutura    |
-| Android SDK    | Framework de interface|
-| SQLite         | Persistência local    |
-| Fragments      | Modularidade de UI    |
-
----
-
-## Arquitetura Visual
-
-- `MainActivity`: Responsável por carregar os fragments de cadastro e visualização.
-- `FragmentoCadastro`: Formulário para inserção de compromissos.
-- `FragmentoVisualizacao`: Lista de compromissos com filtros por data.
-- `SQLite`: Banco de dados local com armazenamento persistente.
-
----
-
-## Métricas do Projeto
-
-- Linhas de Código: ~800  
-- Classes Criadas: 6  
-- Padrão Arquitetural: MVC  
-- Compatibilidade: Android 5.0+
+Kleberson Crystyan de Lima
